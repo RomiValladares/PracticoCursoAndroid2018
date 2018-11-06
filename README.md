@@ -3,7 +3,7 @@
 ## Carpeta FragmentTest2: ##
 
 - Package backstack = Practico 8
-- Package bars = Viewpager + tabs
+- Package bars = Practico 12
 - Package multipane = Practico 9
 - Package navigationdrawer = Practico 13
 - Package tabs = Practico 11
