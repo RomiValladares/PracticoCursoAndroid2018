@@ -9,3 +9,11 @@
 - Package tabs = Practico 11
 - Package viewpager = Practico 10
 - Package webview 
+
+## Carpeta clase-networkexample: ##
+
+Ejemplos de AsyncTask, AsyncTaskLoader, RecyclerView, Parcelable, Intent extras.
+
+- Package ejemplo_countries = Practico 17
+- Package ejemplo_marvels = Practico 18
+- Package ejemplo_numbers = Practico 16
