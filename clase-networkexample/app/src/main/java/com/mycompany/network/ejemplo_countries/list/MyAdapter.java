@@ -18,10 +18,12 @@ import java.util.ArrayList;
  * Created by romina valladaresromina@gmail.com on 10/11/18.
  */
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
+    private final CountryAdapterListener listener;
     private ArrayList<Country> mDataset;
 
-    public MyAdapter(ArrayList<Country> myDataset) {
+    public MyAdapter(ArrayList<Country> myDataset, CountryAdapterListener listener) {
         mDataset = myDataset;
+       this.listener = listener;
     }
 
     @Override
@@ -39,6 +41,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public void onBindViewHolder(MyViewHolder holder, int position) {
         holder.mTextView.setText(mDataset.get(position).getName());
         Picasso.get().load(mDataset.get(position).getFlag()).into(holder.imgCountry);
+
+        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            public boolean onLongClick(View view) {
+                return listener.startActionMode(view);
+            }
+        });
     }
 
     @Override
@@ -49,6 +57,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     public void setData(ArrayList<Country> data) {
         this.mDataset = data;
+    }
+
+    public interface CountryAdapterListener {
+        boolean startActionMode(View v);
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {

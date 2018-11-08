@@ -13,14 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ejemplo_numbers.MainActivity"></activity>
-        <activity android:name=".ejemplo_countries.MainActivity"></activity>
-        <activity android:name=".ejemplo_marvels.MainActivity">
+        <activity android:name=".ejemplo_countries.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ejemplo_marvels.MainActivity"></activity>
         <activity android:name=".ejemplo_marvels.WonderDetailActivity"></activity>
     </application>
 

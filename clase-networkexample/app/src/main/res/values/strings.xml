@@ -5,4 +5,5 @@
     <string name="reload">Reload</string>
     <string name="search">Buscar</string>
     <string name="input_country">Ingrese Pais</string>
+    <string name="search_title">Buscar...</string>
 </resources>
